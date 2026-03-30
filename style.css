@@ -1,0 +1,347 @@
+:root {
+    --bg-white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-light: #666666;
+    --accent: #d4af37; /* Oro leggero */
+    --section-bg: #fdfdfd; /* Un bianco quasi impercettibile per lo sfondo dei servizi */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+    font-size: 16px; /* Base font size */
+}
+
+/* --- NAVBAR (Ottimizzata Mobile) --- */
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.logo span {
+    font-weight: 300;
+    color: var(--text-light);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* Media Query per la Nav su Mobile (Stacking verticale) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 5%;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 5px;
+    }
+}
+
+/* --- HERO SECTION (Immagine più Visibile) --- */
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        /* ABBIAMO RIDOTTO L'OVERLAY BIANCO DA 0.8 A 0.5 PER PIÙ VISIBILITÀ */
+        linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+        url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    color: var(--text-light);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 35px;
+    background: var(--text-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+/* Ottimizzazione Hero per Mobile */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh; /* Tieni l'immagine più visibile, ma l'altezza si riduce */
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* --- SEZIONI GENERALI --- */
+.about, .services-section {
+    padding: 60px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background: var(--accent);
+}
+
+/* Ottimizzazione Sezioni per Mobile */
+@media (max-width: 768px) {
+    .about, .services-section {
+        padding: 40px 5%;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* --- CHI SIAMO --- */
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+/* --- GRIGLIA SERVIZI (Ottimizzata) --- */
+#services-container {
+    background-color: var(--section-bg);
+    padding: 20px 0;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.services-grid {
+    display: grid;
+    /* ABBIAMO AGGIUSTATO IL MINMAX PER UNA GRIGLIA CHE SI ADATTA MEGLIO */
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 20px;
+    padding: 20px 2.5%;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    text-align: left;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.service-card h3 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.treatment-list {
+    list-style: none;
+}
+
+.treatment-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.treatment-list li:last-child {
+    border-bottom: none;
+}
+
+.treatment-title {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.treatment-price {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+/* Ottimizzazione Griglia Servizi per Mobile (Incolonnamento) */
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Una colonna sola sul telefono */
+        gap: 15px;
+    }
+    .service-card {
+        padding: 20px;
+    }
+}
+
+/* --- FOOTER (Ottimizzato) --- */
+footer {
+    text-align: center;
+    padding: 25px 5%;
+    background: #fdfdfd;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* --- RECENSIONI --- */
+.reviews-section {
+    padding: 80px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.review-card {
+    background: #fdfdfd;
+    padding: 40px 30px;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px; /* Angoli meno arrotondati per un look più moderno/minimal */
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.client-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 2px solid var(--accent);
+}
+
+.review-text {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.client-name {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.stars {
+    color: var(--accent);
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+
+section {
+    /* Questo crea un "margine invisibile" per lo scorrimento */
+    scroll-margin-top: 100px;
+}
+
+per ogni sezione: */
+#chi-siamo, #servizi, #recensioni {
+    scroll-margin-top: 90px;
+}

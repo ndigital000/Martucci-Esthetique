@@ -1,0 +1,21 @@
+{
+  "recensioni": [
+    {
+      "nome": "Giulia Rossi",
+      "messaggio": "Professionalità e pulizia impeccabili. Ho provato la laminazione sopracciglia e il risultato è stato superiore alle aspettative!",
+      "stelle": 5
+    },
+    {
+      "nome": "Elena V.",
+      "foto": "img/client2.jpg",
+      "messaggio": "Martucci Estétique è la mia oasi di relax. Il trattamento viso personalizzato ha rigenerato la mia pelle. Consigliatissimo.",
+      "stelle": 5
+    },
+    {
+      "nome": "Marco B.",
+      "foto": "img/client3.jpg",
+      "messaggio": "Ottimo servizio di epilazione laser. Personale preparato e ambiente molto accogliente e moderno.",
+      "stelle": 4
+    }
+  ]
+}

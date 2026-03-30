@@ -1,0 +1,46 @@
+{
+  "categorie": [
+    {
+      "nome": "Sopracciglia",
+      "trattamenti": [
+        { "titolo": "Architettura e Definizione", "prezzo": "€30" },
+        { "titolo": "Laminazione Sopracciglia", "prezzo": "€60" },
+        { "titolo": "Tinta Sopracciglia", "prezzo": "€20" }
+      ]
+    },
+    {
+      "nome": "Viso",
+      "trattamenti": [
+        { "titolo": "Pulizia Viso Profonda", "prezzo": "€70" },
+        { "titolo": "Trattamento Idratante", "prezzo": "€90" },
+        { "titolo": "Peeling Chimico", "prezzo": "€110" },
+        { "titolo": "Massaggio Viso Linfodrenante", "prezzo": "€50" }
+      ]
+    },
+    {
+      "nome": "Unghie",
+      "trattamenti": [
+        { "titolo": "Manicure", "prezzo": "€40" },
+        { "titolo": "Semipermanente Mani", "prezzo": "€50" },
+        { "titolo": "Ricostruzione in Gel", "prezzo": "€90" },
+        { "titolo": "Pedicure Completa", "prezzo": "€60" }
+      ]
+    },
+    {
+      "nome": "Laser Epilazione",
+      "trattamenti": [
+        { "titolo": "Zona Piccola (es. Baffetto)", "prezzo": "€35" },
+        { "titolo": "Zona Media (es. Ascelle)", "prezzo": "€60" },
+        { "titolo": "Gambe Intere", "prezzo": "€120" }
+      ]
+    },
+    {
+      "nome": "Dermopigmentazione",
+      "trattamenti": [
+        { "titolo": "Microblading Sopracciglia (Primo Singolo)", "prezzo": "€250" },
+        { "titolo": "Ritocco Microblading", "prezzo": "€150" },
+        { "titolo": "Eyeliner Semipermanente", "prezzo": "€200" }
+      ]
+    }
+  ]
+}
